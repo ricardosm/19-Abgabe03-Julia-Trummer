@@ -1,9 +1,9 @@
 package at.fhj.iit;
 
-import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class CalculatorTest {
 
@@ -36,7 +36,10 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testAdd2() {
-
+		//Exercise Phase
+		double val = calc.add(10 , 5);
+		//Verify Phase
+		assertEquals(10, val, 0.001);
 	}
 
 	/**
@@ -46,7 +49,9 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testMinus() {
-
+		//Exercise Phase
+		double val = calc.minus(20, 5);
+		assertEquals(15, val, 0.001);
 	}
 
 	/**
@@ -56,7 +61,8 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testMultiply() {
-
+		double val = calc.multiply(20, 5);
+		assertEquals(100, val, 0.001);
 	}
 
 	/**
@@ -66,9 +72,9 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testDivide() {
-
+		double val = calc.divide(20,5);
+		assertEquals(4, val, 0.001);
 	}
-
 
 	// VERIFY
 	@Test(expected = ArithmeticException.class)
