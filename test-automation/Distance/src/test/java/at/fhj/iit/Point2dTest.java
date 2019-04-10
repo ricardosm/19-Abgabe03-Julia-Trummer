@@ -57,8 +57,9 @@ public class Point2dTest {
 	 * - try to compare your result with the return value of distanceFromOrigin()
 	 */
 	@Test
-	public void testDistanceFromOrigin(){
+	public void testDistanceFromOrigin() {
+		point2X.setXY(20, 0);
 		double distfromOrigin = point2X.distanceFromOrigin();
-		assertEquals(0, distfromOrigin, 0.001);
+		assertEquals(20, distfromOrigin, 0.001);
 	}
 }
