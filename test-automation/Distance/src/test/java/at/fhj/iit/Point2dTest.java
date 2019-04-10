@@ -2,6 +2,7 @@ package at.fhj.iit;
 
 import static org.junit.Assert.*;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +11,7 @@ public class Point2dTest {
 	/**
 	 * Set some Point2d for testing their functionality
 	 */
-
+	Point2d point2X = new Point2d();
 	/**
 	 * Test the Setter of the x-coordinate
 	 * - set the coordinate
@@ -19,6 +20,8 @@ public class Point2dTest {
 	 */
 	@Test
 	public void testSetX(){
+		point2X.setX(7);
+		assertEquals(7, point2X.getX(), 0.001);
 	}
 
 	/**
@@ -29,6 +32,8 @@ public class Point2dTest {
 	 */
 	@Test
 	public void testSetY(){
+		point2X.setY(10);
+		assertEquals(10, point2X.getY(), 0.001);
 	}
 
 
@@ -40,6 +45,9 @@ public class Point2dTest {
 	 */
 	@Test
 	public void testDistanceFrom(){
+		Point2d pt = new Point2d(10, 10);
+		double distance = point2X.distanceFrom(pt);
+		assertEquals(14.1421, distance, 0.001 );
 	}
 
 	/**
@@ -50,5 +58,7 @@ public class Point2dTest {
 	 */
 	@Test
 	public void testDistanceFromOrigin(){
+		double distfromOrigin = point2X.distanceFromOrigin();
+		assertEquals(0, distfromOrigin, 0.001);
 	}
 }
