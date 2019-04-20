@@ -7,13 +7,7 @@ public interface Stack {
 	 */
 	public abstract boolean isEmpty();
 
-	/**
-	 * Pushes an item onto the top of this stack.
-	 * 
-	 * if Stack is full return an error message
-	 * 
-	 * @param item
-	 */
+
 	public abstract void push(String item);
 
 	/**
